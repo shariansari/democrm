@@ -1,11 +1,10 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
 import { NavLink } from "react-router-dom";
 
 function Homepage() {
   return (
     <div className="container doCenter">
-      <Form>
+     
         <section className="vh-100">
           <div className="container-fluid h-custom">
             <div className="row d-flex justify-content-center align-items-center h-100">
@@ -36,7 +35,7 @@ function Homepage() {
                     </label>
                   </div>
                   {/* Password input */}
-                  <div className="form-outline mb-4">
+                  <div className="form-outline mb-">
                     <input
                       type="password"
                       id="form3Example4"
@@ -70,7 +69,7 @@ function Homepage() {
             </div>
           </div>
         </section>
-      </Form>
+     
     </div>
   );
 }

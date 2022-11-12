@@ -8,25 +8,27 @@ function Register() {
     const [password,setPassword]=useState("")
     const [conpassword,setConpassword]=useState("")
 
-    function handelSubmit() {
+    function handelSubmit(e) {
+        e.preventDefault();
+
       
 
-    //   if(!name ||!email ||!password||!conpassword){
-    //     alert("fields cant be empty")
-    //   }
-    //   else if(!email.includes("@")){
-    //     alert("Please Enter Valid email")
-    //   }
-    //   else if(password !== conpassword){
-    //     alert("Password not matches")
-    //   }
-    //   else if ( password.length<5){
-    //     alert("Password Should not be less than five")
-    //   }
-    //   else{
-    //     console.log("Regested successfully")
-    //   }
-    alert("Summited Successfuly")
+      if(!name ||!email ||!password||!conpassword){
+        alert("fields cant be empty")
+      }
+      else if(!email.includes("@")){
+        alert("Please Enter Valid email")
+      }
+      else if(password !== conpassword){
+        alert("Password not matches")
+      }
+      else if ( password.length<5){
+        alert("Password Should not be less than five")
+      }
+      else{
+        alert("Regested successfully")
+      }
+
     }
     
 
