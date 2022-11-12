@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Form from "react-bootstrap/Form";
 import { NavLink } from 'react-router-dom';
 
 
@@ -9,35 +8,36 @@ function Register() {
     const [password,setPassword]=useState("")
     const [conpassword,setConpassword]=useState("")
 
-    function handelSubmit(e) {
-      e.prevenDefault();
+    function handelSubmit() {
+      
 
-      if(!name ||!email ||!password||!conpassword){
-        alert("fields cant be empty")
-      }
-      else if(!email.includes("@")){
-        alert("Please Enter Valid email")
-      }
-      else if(password !== conpassword){
-        alert("Password not matches")
-      }
-      else if ( password.length<5){
-        alert("Password Should not be less than five")
-      }
-      else{
-        console.log("Regested successfully")
-      }
+    //   if(!name ||!email ||!password||!conpassword){
+    //     alert("fields cant be empty")
+    //   }
+    //   else if(!email.includes("@")){
+    //     alert("Please Enter Valid email")
+    //   }
+    //   else if(password !== conpassword){
+    //     alert("Password not matches")
+    //   }
+    //   else if ( password.length<5){
+    //     alert("Password Should not be less than five")
+    //   }
+    //   else{
+    //     console.log("Regested successfully")
+    //   }
+    alert("Summited Successfuly")
     }
+    
 
   return (
     
     <div className="container doCenter">
-
-      <Form onSubmit={handelSubmit}>
-        <section className="vh-100">
+      <section className="vh-100">
           <div className="container-fluid h-custom">
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div className="col-md-9 col-lg-6 col-xl-5">
+                
                 <img
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                   className="img-fluid"
@@ -47,7 +47,7 @@ function Register() {
               <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form onSubmit={handelSubmit}>
                   <p className="log">
-                    <span style={{ color: "Purple" }}>Si</span>
+                    <span style={{ color: "Grey" }}>Si</span>
                     <span style={{ color: "blue" }}>gn</span>
                     <span style={{ color: "green" }}>in</span>
                   </p>
@@ -110,9 +110,11 @@ function Register() {
                   <div className="text-center text-lg-start mt-0 pt-2">
                     <button
                    
-                      type="button"
+                      
                       className="btn btn-primary btn-lg col-12 mb-0"
                       style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
+                      onSubmit={handelSubmit}
+                      type="Submit"
                     >
                       Sign Up
                     </button>
@@ -128,11 +130,7 @@ function Register() {
             </div>
           </div>
         </section>
-      </Form>
-      <div>{email}</div>
-      <div>{name}</div>
-      <div>{password}</div>
-      <div>{conpassword}</div>
+   
       
     </div>
     
