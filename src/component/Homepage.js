@@ -24,7 +24,7 @@ function Homepage() {
                     <span style={{ color: "green" }}>in</span>
                   </p>
                   {/* Email input */}
-                  <div  className="form-outline mb-4">
+                  <div className="form-outline mb-4">
                     <input
                       type="email"
                       id="form3Example3"
@@ -50,7 +50,7 @@ function Homepage() {
                   <div className="d-flex justify-content-between align-items-center">
                     {/* Checkbox */}
                   </div>
-                  <div className="text-center text-lg-start mt-4 pt-2">
+                  <div className="text-center text-lg-start mt-0 pt-2">
                     <button
                       type="button"
                       className="btn btn-primary btn-lg col-12"

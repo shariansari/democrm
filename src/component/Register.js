@@ -1,13 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from "react-bootstrap/Form";
 import { NavLink } from 'react-router-dom';
 
 
 function Register() {
+    const [name,setName] =useState("")
+    const [email,setEmail] =useState("")
+    const [password,setPassword]=useState("")
+    const [conpassword,setConpassword]=useState("")
+
+    function handelSubmit(e) {
+      e.prevenDefault();
+
+      if(!name ||!email ||!password||!conpassword){
+        alert("fields cant be empty")
+      }
+      else if(!email.includes("@")){
+        alert("Please Enter Valid email")
+      }
+      else if(password !== conpassword){
+        alert("Password not matches")
+      }
+      else if ( password.length<5){
+        alert("Password Should not be less than five")
+      }
+      else{
+        console.log("Regested successfully")
+      }
+    }
+
   return (
+    
     <div className="container doCenter">
 
-      <Form>
+      <Form onSubmit={handelSubmit}>
         <section className="vh-100">
           <div className="container-fluid h-custom">
             <div className="row d-flex justify-content-center align-items-center h-100">
@@ -19,19 +45,20 @@ function Register() {
                 />
               </div>
               <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                <form>
+                <form onSubmit={handelSubmit}>
                   <p className="log">
                     <span style={{ color: "Purple" }}>Si</span>
                     <span style={{ color: "blue" }}>gn</span>
-                    <span style={{ color: "green" }}>Up</span>
+                    <span style={{ color: "green" }}>in</span>
                   </p>
                   {/* Email input */}
                   <div className="form-outline mb-2">
                     <input
                       type="text"
-                     
+        
                       className="form-control form-control-lg"
                       placeholder="Enter Your Name"
+                      onChange={(e)=>setName(e.target.value)}
                     />
                     <label className="form-label" htmlFor="form3Example3">
                       Full Name
@@ -40,9 +67,11 @@ function Register() {
                   <div className="form-outline mb-2">
                     <input
                       type="email"
+                    
                       id="form3Example3"
                       className="form-control form-control-lg"
                       placeholder="Enter a valid email address"
+                      onChange={(e)=>setEmail(e.target.value)}
                     />
                     <label className="form-label" htmlFor="form3Example3">
                       Email address
@@ -51,10 +80,12 @@ function Register() {
                   {/* Password input */}
                   <div className="form-outline mb-2">
                     <input
+                    
                       type="password"
                       id="form3Example4"
                       className="form-control form-control-lg"
                       placeholder="Enter password"
+                      onChange={(e)=>setPassword(e.target.value)}
                     />
                     <label className="form-label" htmlFor="form3Example4">
                       Password
@@ -63,6 +94,8 @@ function Register() {
                   <div className="form-outline mb-2">
                     <input
                       type="password"
+                      
+                      onChange={(e)=>setConpassword(e.target.value)}
                     
                       className="form-control form-control-lg"
                       placeholder="Confirm password"
@@ -76,6 +109,7 @@ function Register() {
                   </div>
                   <div className="text-center text-lg-start mt-0 pt-2">
                     <button
+                   
                       type="button"
                       className="btn btn-primary btn-lg col-12 mb-0"
                       style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
@@ -95,6 +129,11 @@ function Register() {
           </div>
         </section>
       </Form>
+      <div>{email}</div>
+      <div>{name}</div>
+      <div>{password}</div>
+      <div>{conpassword}</div>
+      
     </div>
     
   )
