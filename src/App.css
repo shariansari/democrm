@@ -25,11 +25,13 @@ height: 100%;
 }
 }
 .doColor{
+  height: 100%;
   background-image: linear-gradient(to right, rgb(240, 159, 216) , rgb(124, 107, 221));
 }
 .doShadow{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
+  background-image: linear-gradient(to right, rgb(240, 159, 216) , rgb(124, 107, 221));
 }
 
 /* /////////////// */

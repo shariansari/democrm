@@ -21,7 +21,7 @@ function Homepage() {
           return{
             ...inputval,[name]:value
           }
-          
+
         })
       };
         const addData=(e)=>{
@@ -131,7 +131,7 @@ function Homepage() {
                      
                     </button>
                     <p className="small fw-bold mt-2 pt-1 mb-0">
-                      Dont have account ?{" "}
+                      Don't have an account ?{" "}
                       <NavLink to="/" className="link-danger">
                         Register
                       </NavLink>
