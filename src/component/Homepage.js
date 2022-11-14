@@ -53,16 +53,8 @@ function Homepage() {
                 const userlogin = userdata.filter((element) => {
                     return element.email === email && element.password === password
                 });
-
-                if (userlogin.length === 0) {
-                    alert("invalid details")
-                } else {
-                    // console.log("user login succesfulyy");
-
-                    localStorage.setItem("user_login", JSON.stringify(userlogin))
-
-                    Navigate("/main")
-                }
+                    userlogin.length &&  Navigate ("/main")
+        
             }
         }
     
@@ -93,6 +85,7 @@ function Homepage() {
                   {/* Email input */}
                   <div className="form-outline mb-2">
                     <input
+                      
                       type="email"
                       name="email"
                       id="form3Example3"
@@ -132,7 +125,7 @@ function Homepage() {
                     </button>
                     <p className="small fw-bold mt-2 pt-1 mb-0">
                       Don't have an account ?{" "}
-                      <NavLink to="/" className="link-danger">
+                      <NavLink to="/register" className="link-danger">
                         Register
                       </NavLink>
                     </p>

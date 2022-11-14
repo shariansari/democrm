@@ -54,7 +54,7 @@ const [inputval, setInputval] = useState({
           position:"top-center"
         })
         setData(localStorage.setItem("usercrm",JSON.stringify([...data,inputval])))
-        Navigate("/login")
+        Navigate("/")
       }
 
       
@@ -147,7 +147,7 @@ const [inputval, setInputval] = useState({
                     </button>
                     <p className="small fw-bold mt-2 pt-1 mb-0">
                       Alreadey have an Account ?{" "}
-                      <NavLink to="/login" className="link-danger">
+                      <NavLink to="/" className="link-danger">
                         Login
                       </NavLink>
                     </p>
