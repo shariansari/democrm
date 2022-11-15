@@ -53,7 +53,7 @@ function Homepage() {
                 const userlogin = userdata.filter((element) => {
                     return element.email === email && element.password === password
                 });
-                    userlogin.length &&  Navigate ("/main")
+                    userlogin.length &&  Navigate ("/")
         
             }
         }

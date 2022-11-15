@@ -54,7 +54,7 @@ const [inputval, setInputval] = useState({
           position:"top-center"
         })
         setData(localStorage.setItem("usercrm",JSON.stringify([...data,inputval])))
-        Navigate("/")
+        Navigate("/login")
       }
 
       

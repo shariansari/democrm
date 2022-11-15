@@ -5,56 +5,160 @@ import { AnimatePresence, motion } from "framer-motion";
 import Logos from "./image/Logos.png"
 
 import {
-    FaHome,
-    FaLeanpub,
-    FaBookReader,
-    FaVideo,
-    FaWpforms,
-    FaBrain,
-    FaLightbulb,
+    
+    FaArrowUp,
     FaRegBell,
     FaUser,
     FaAngleDoubleRight,
     FaBars,
+    FaUserTie,
+    FaUserCheck,
+    FaSortAmountUpAlt,
+    FaRegistered,
+    FaSearchPlus,
+    FaEthereum,
+    FaSitemap,
+    FaUserAltSlash,
+    FaUserMinus,
+    FaClipboard,
+    FaChalkboardTeacher,
+    FaAssistiveListeningSystems,
+    FaBuffer,
+    FaHubspot,
+    FaScribd,
+    FaAmericanSignLanguageInterpreting,
+    FaRegCaretSquareRight,
+    FaUserShield,
+    FaVectorSquare,
+    FaVideo,
+    FaVideoSlash,
+
   
   } from "react-icons/fa";
 
 
   const routes = [
+  
     {
-      path: "/dashboard",
+      path: "/",
       name: "Dashboard",
-      icon: <FaHome />,
+      icon: <FaUser />,
     },
     {
-      path: "/liveclasses",
-      name: "Live class",
-      icon: <FaLeanpub />,
+      path: "/myaccount",
+      name: "My Account",
+      icon: <FaUser />,
     },
     {
-      path: "/Upcomingclass",
-      name: "Up Coming class",
-      icon: <FaBookReader />,
+      path: "/toperformer",
+      name: "Top Performer",
+      icon: <FaArrowUp />,
     },
     {
-      path: "/recordedlectures",
-      name: "Recorded Lectures",
+      path: "/humanresource",
+      name: "Human Resource",
+      icon: <FaUserTie/>,
+    },
+    {
+      path: "/myclient",
+      name: "My Client",
+      icon: <FaUserCheck/>,
+    },
+    {
+      path: "/newchart",
+      name: "New Chart",
+      icon: <FaSortAmountUpAlt />,
+    },
+    {
+      path: "/unregistered",
+      name: "Un Regestered",
+      icon: <FaRegistered />,
+    },
+    {
+      path: "/enquires",
+      name: "Enquires",
+      icon: <FaSearchPlus />,
+    },
+ 
+    {
+      path: "/Activation",
+      name: "Activation",
+      icon: <FaEthereum/>,
+    },
+    {
+      path: "/service",
+      name: "Service",
+      icon: <FaSitemap />,
+    },
+    {
+      path: "/others",
+      name: "Others",
+      icon: <FaUserAltSlash />,
+    },
+    {
+      path: "/previousclient",
+      name: "Previous Client",
+      icon: <FaUserMinus />,
+    },
+    {
+      path: "/reports",
+      name: "Reports",
+      icon: <FaClipboard />,
+    },
+    {
+      path: "/previousstudent",
+      name: "Previous Students",
+      icon: <FaChalkboardTeacher />,
+    },
+    {
+      path: "/training",
+      name: "Training",
+      icon: <FaAssistiveListeningSystems />,
+    },
+    {
+      path: "/stats",
+      name: "Stats",
+      icon: <FaBuffer/>,
+    },
+    {
+      path: "/marketing",
+      name: "Marketing",
+      icon: <FaHubspot/>,
+    },
+    {
+      path: "/operations",
+      name: "Operations",
+      icon: <FaScribd/>,
+    },
+    {
+      path: "/renewal",
+      name: "Renewal",
+      icon: <FaAmericanSignLanguageInterpreting />,
+    },
+    {
+      path: "/vediocourse",
+      name: "Vedio Course",
+      icon: <FaRegCaretSquareRight/>,
+    },
+    {
+      path: "/vcnewsclient",
+      name: "Vc News Client",
+      icon: <FaUserShield />,
+    },
+    {
+      path: "/vctraining",
+      name: "Vc Training",
+      icon: <FaVectorSquare />,
+    },
+    {
+      path: "/vcmyclients",
+      name: "Vc My Clients",
       icon: <FaVideo />,
     },
     {
-      path: "/assignment",
-      name: "Assignment",
-      icon: <FaWpforms />,
-    },
-    {
-      path: "/testseries",
-      name: "Test Series",
-      icon: <FaBrain />,
-    },
-    {
-      path: "/yourdoubt",
-      name: "Your Doubt",
-      icon: <FaLightbulb />,
+      path: "/vcothers",
+      name: "Vc others",
+      icon: <FaVideoSlash />,
     },
     {
       path: "/notification",
@@ -67,7 +171,7 @@ import {
       icon: <FaUser />,
     },
     {
-      path: "/lougout",
+      path: "/login",
       name: "Logout",
       icon: <FaAngleDoubleRight />,
     },

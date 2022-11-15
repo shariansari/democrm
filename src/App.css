@@ -25,7 +25,7 @@ height: 100%;
 }
 }
 .doColor{
-  height: 100%;
+  height: 100vh;
 }
 body{
   background-image: linear-gradient(to right, rgb(240, 159, 216) , rgb(124, 107, 221));
@@ -46,7 +46,7 @@ body{
 .sidebar{
   background-color:rgba(56, 56, 189, 0.836);
   color: white;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .top-section{
   display: flex;
